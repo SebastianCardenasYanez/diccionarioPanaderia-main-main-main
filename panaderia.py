@@ -62,15 +62,14 @@ for i, val in enumerate(listaCategoria):
 opcioncategoria = int(input())
 
 if opcioncategoria == 0:
-    datosCategoria = (menu.get(listaCategoria)[opcioncategoria])
-    valorProducto = (datosCategoria.get("Producto").get("valor"))
+    valorProducto = (menu.get("pan").get("Producto")["valor"])
     #print(menu.get("Pan").get("Producto"))
     print("seleccione el producto : ")
     for i, val in enumerate(menu.get("Pan").get("Producto")):
         print(f"{i}. {val}")
     opcionProducto = int(input())
     if opcionProducto == 8 :
-        print(f"Hay una promocion de {menu.get("Pan").get("Promociones1")[0]}")
+        print(f"Hay una promocion de {menu.get('Pan').get('Promociones1')[0]}")
         deseaPromocion = int(input("¿Usuario desea la promocion? "))
         for i in enumerate("si", "no") :
             if deseaPromocion == 0 :
@@ -93,7 +92,7 @@ if opcioncategoria == 0:
             elif dinero < valorUnidades :
                 print ("no tiene dinero suficiente, gracias por su compra")
     elif opcionProducto == 5 :
-        print(f"Hay una promocion de {menu.get("Pan").get("Promociones1")[1]}")
+        print(f"Hay una promocion de {menu.get('Pan').get('Promociones1')[1]}")
         deseaPromocion = int(input("¿Usuario desea la promocion? "))
         for i in enumerate("si", "no") :
             if deseaPromocion == 0 :
